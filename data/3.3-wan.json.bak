@@ -1,0 +1,74 @@
+{
+    "status": "ok",
+    "data": {
+        "tip":["晚饭买一送一"],
+        "goods":[{
+            "title": "荤",
+            "icon": "xe60b",
+            "list": [{
+                "id": "200010",
+                "title": "葱爆羊肉",
+                "price": "8",
+                "remaining": "20"
+            },{
+                "id": "200011",
+                "title": "火爆腰花",
+                "price": "12",
+                "remaining": "33"
+            },{
+                "id": "200010",
+                "title": "辣子鸡丁",
+                "price": "8",
+                "remaining": "20"
+            },{
+                "id": "200011",
+                "title": "火爆腰花",
+                "price": "12",
+                "remaining": "33"
+            },{
+                "id": "200010",
+                "title": "辣子鸡丁",
+                "price": "8",
+                "remaining": "20"
+            }]
+        },{
+            "title": "素",
+            "icon": "xe60c",
+            "list": [{
+                "id": "200010",
+                "title": "地三鲜",
+                "price": "8",
+                "remaining": "20"
+            },{
+                "id": "200011",
+                "title": "蒜蓉粉丝扇贝",
+                "price": "12",
+                "remaining": "33"
+            },{
+                "id": "200010",
+                "title": "炝炒圆白菜",
+                "price": "8",
+                "remaining": "20"
+            }],
+        },{
+            "title": "主食",
+            "icon": "xe60d",
+            "list": [{
+                "id": "300010",
+                "title": "蛋炒饭",
+                "price": "5",
+                "remaining": "20"
+            },{
+                "id": "300011",
+                "title": "米饭",
+                "price": "2",
+                "remaining": "33"
+            },{
+                "id": "300012",
+                "title": "猪肉大葱水饺",
+                "price": "18",
+                "remaining": "20"
+            }]
+        }]
+    }
+}
