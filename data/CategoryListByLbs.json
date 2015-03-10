@@ -1,0 +1,339 @@
+{
+    "errno": 0,
+    "errmsg": "ok",
+    "logid": "54f8564065fad4507",
+    "data": {
+        "shop": {
+            "number": "001003005",
+            "address": "",
+            "first_dealer": "20",
+            "parent_id": "3423",
+            "cityid": "2",
+            "_logid_reason": "距离",
+            "order_base": "0",
+            "isbig": "0",
+            "_distance": "0.4579761388282",
+            "in_free_map": "0",
+            "zchtid": "3225",
+            "lat": "39.930188",
+            "lng": "116.465893",
+            "name": "捷玛特超市",
+            "mobile": "18515913073",
+            "own_mobile": "18515913073",
+            "range": "1",
+            "WorkBegin": "09:00",
+            "WorkEnd": "22:00",
+            "open": "09:00",
+            "close": "22:00",
+            "had_weixin_qrcode": "0",
+            "bigid": "0",
+            "outofservice": "0",
+            "message": "",
+            "sysconf": {
+                "not_freight": "100",
+                "min_amount": "50"
+            },
+            "business": {
+                "str": [
+                    "今天",
+                    "明天",
+                    "后天"
+                ],
+                "date": [
+                    [
+                        "1小时送达"
+                    ],
+                    [
+                        "10:00-11:00",
+                        "11:00-12:00",
+                        "12:00-13:00",
+                        "13:00-14:00",
+                        "14:00-15:00",
+                        "15:00-16:00",
+                        "16:00-17:00",
+                        "17:00-18:00",
+                        "18:00-19:00",
+                        "19:00-20:00",
+                        "20:00-21:00"
+                    ],
+                    [
+                        "10:00-11:00",
+                        "11:00-12:00",
+                        "12:00-13:00",
+                        "13:00-14:00",
+                        "14:00-15:00",
+                        "15:00-16:00",
+                        "16:00-17:00",
+                        "17:00-18:00",
+                        "18:00-19:00",
+                        "19:00-20:00",
+                        "20:00-21:00"
+                    ]
+                ],
+                "ext": "可预定"
+            }
+        },
+        "category": [
+            {
+                "name": "鲜蜂生活",
+                "id": "0",
+                "sort": "0",
+                "icon": "http://www.beequick.cn/images/xianfeng.png",
+                "childs": [
+                    {
+                        "id": "40",
+                        "img": "http://www.beequick.cn//upload/activity/201503041731346.jpg",
+                        "pc_img": "http://www.beequick.cn//upload/activity/2015030417313472.jpg",
+                        "app_img": "http://www.beequick.cn//upload/activity/201503041731346.jpg",
+                        "isactivity": "1",
+                        "istags": "0",
+                        "name": "三·七 女王节",
+                        "sort": "1"
+                    },
+                    {
+                        "id": "38",
+                        "name": "元宵节专场",
+                        "app_img": "http://www.beequick.cn/upload/2015/03/04/201503041732515066.jpg",
+                        "pc_img": "http://www.beequick.cn/upload/2015/03/04/201503041732517179.jpg",
+                        "is_index": "0",
+                        "is_show": "1",
+                        "sort": "21",
+                        "opentime": "1425346050",
+                        "closetime": "1426382852",
+                        "daystart": "00:00",
+                        "dayend": "23:59",
+                        "cityids": "2",
+                        "img": "http://www.beequick.cn/upload/2015/03/04/201503041732515066.jpg",
+                        "istags": "1",
+                        "isactivity": "0"
+                    },
+                    {
+                        "id": "1",
+                        "name": "买一赠一专场",
+                        "app_img": "http://www.beequick.cn/upload/2015/02/12/201502122154015109.jpg",
+                        "pc_img": "http://www.beequick.cn/upload/2015/02/12/201502122154013326.jpg",
+                        "is_index": "0",
+                        "is_show": "1",
+                        "sort": "22",
+                        "opentime": "1388534400",
+                        "closetime": "1451606400",
+                        "daystart": "00:00",
+                        "dayend": "23:59",
+                        "cityids": "2",
+                        "img": "http://www.beequick.cn/upload/2015/02/12/201502122154015109.jpg",
+                        "istags": "1",
+                        "isactivity": "0"
+                    },
+                    {
+                        "id": "36",
+                        "name": "年货堆成羴 专场",
+                        "app_img": "http://www.beequick.cn/upload/2015/02/12/201502121803541655.jpg",
+                        "pc_img": "http://www.beequick.cn/upload/2015/02/12/201502121803549286.jpg",
+                        "is_index": "0",
+                        "is_show": "1",
+                        "sort": "23",
+                        "opentime": "1423735686",
+                        "closetime": "1455271687",
+                        "daystart": "00:00",
+                        "dayend": "23:59",
+                        "cityids": "2",
+                        "img": "http://www.beequick.cn/upload/2015/02/12/201502121803541655.jpg",
+                        "istags": "1",
+                        "isactivity": "0"
+                    },
+                    {
+                        "id": "14",
+                        "name": "星巴克专场",
+                        "app_img": "http://www.beequick.cn/upload/2015/02/12/201502122155152247.jpg",
+                        "pc_img": "http://www.beequick.cn/upload/2015/02/12/201502122155158681.jpg",
+                        "is_index": "0",
+                        "is_show": "1",
+                        "sort": "24",
+                        "opentime": "1419934549",
+                        "closetime": "1456740962",
+                        "daystart": "00:00",
+                        "dayend": "23:59",
+                        "cityids": "2",
+                        "img": "http://www.beequick.cn/upload/2015/02/12/201502122155152247.jpg",
+                        "istags": "1",
+                        "isactivity": "0"
+                    },
+                    {
+                        "id": "16",
+                        "name": "美酒卤味专场",
+                        "app_img": "http://www.beequick.cn/upload/2015/02/12/201502122240459271.jpg",
+                        "pc_img": "http://www.beequick.cn/upload/2015/02/12/201502122240459226.jpg",
+                        "is_index": "0",
+                        "is_show": "1",
+                        "sort": "25",
+                        "opentime": "1419939534",
+                        "closetime": "1454153936",
+                        "daystart": "00:00",
+                        "dayend": "23:59",
+                        "cityids": "2",
+                        "img": "http://www.beequick.cn/upload/2015/02/12/201502122240459271.jpg",
+                        "istags": "1",
+                        "isactivity": "0"
+                    }
+                ]
+            },
+            {
+                "id": "55",
+                "name": "品牌热荐",
+                "icon": "http://www.beequick.cn/upload/activity/2014121111295316.png",
+                "sort": "2",
+                "is_open": "1",
+                "childs": [
+                    {
+                        "id": "106",
+                        "name": "鲜蜂鲜果",
+                        "icon": "",
+                        "sort": "2"
+                    },
+                    {
+                        "id": "99",
+                        "name": "鲜蜂鲜食",
+                        "icon": "",
+                        "sort": "3",
+                        "flag": "http://www.beequick.cn//upload/activity/2015012214334666.png"
+                    },
+                    {
+                        "id": "105",
+                        "name": "鲜蜂干果",
+                        "icon": "",
+                        "sort": "4"
+                    },
+                    {
+                        "id": "143",
+                        "name": "鲜蜂便当",
+                        "icon": "",
+                        "sort": "5",
+                        "flag": "http://www.beequick.cn//upload/activity/201501261023269.png"
+                    },
+                    {
+                        "id": "147",
+                        "name": "鲜蜂饮品",
+                        "icon": "",
+                        "sort": "6",
+                        "flag": "http://www.beequick.cn//upload/activity/2015012212001893.png"
+                    },
+                    {
+                        "id": "108",
+                        "name": "星巴克",
+                        "icon": "",
+                        "sort": "10"
+                    },
+                    {
+                        "id": "107",
+                        "name": "万得妙",
+                        "icon": "",
+                        "sort": "13"
+                    },
+                    {
+                        "id": "146",
+                        "name": "澳门豆捞",
+                        "icon": "",
+                        "sort": "17"
+                    },
+                    {
+                        "id": "111",
+                        "name": "哈根达斯",
+                        "icon": "",
+                        "sort": "900"
+                    }
+                ]
+            },
+            {
+                "id": "80",
+                "name": "网络超市",
+                "icon": "http://www.beequick.cn/upload/activity/2014121111042848.png",
+                "sort": "300",
+                "is_open": "1",
+                "childs": [
+                    {
+                        "id": "136",
+                        "name": "进口专区",
+                        "icon": "",
+                        "sort": "311"
+                    },
+                    {
+                        "id": "90",
+                        "name": "卤味小吃",
+                        "icon": "",
+                        "sort": "315"
+                    },
+                    {
+                        "id": "82",
+                        "name": "休闲零食",
+                        "icon": "",
+                        "sort": "320"
+                    },
+                    {
+                        "id": "83",
+                        "name": "薯条薯片",
+                        "icon": "",
+                        "sort": "330"
+                    },
+                    {
+                        "id": "84",
+                        "name": "干果炒货",
+                        "icon": "",
+                        "sort": "340"
+                    },
+                    {
+                        "id": "85",
+                        "name": "饼干蛋糕",
+                        "icon": "",
+                        "sort": "350"
+                    },
+                    {
+                        "id": "86",
+                        "name": "糖果巧克力",
+                        "icon": "",
+                        "sort": "360"
+                    },
+                    {
+                        "id": "87",
+                        "name": "果脯蜜饯",
+                        "icon": "",
+                        "sort": "370"
+                    },
+                    {
+                        "id": "88",
+                        "name": "乳制品",
+                        "icon": "",
+                        "sort": "380"
+                    },
+                    {
+                        "id": "91",
+                        "name": "速食便当",
+                        "icon": "",
+                        "sort": "410",
+                        "flag": "http://www.beequick.cn//upload/activity/2015030313011214.png"
+                    },
+                    {
+                        "id": "92",
+                        "name": "饮料",
+                        "icon": "/upload/activity/2014121213280994.jpg",
+                        "sort": "420",
+                        "flag": "http://www.beequick.cn//upload/activity/2015012214373147.png"
+                    },
+                    {
+                        "id": "93",
+                        "name": "酒类",
+                        "icon": "",
+                        "sort": "430",
+                        "flag": "http://www.beequick.cn//upload/activity/2015022716223435.png"
+                    },
+                    {
+                        "id": "141",
+                        "name": "整箱购",
+                        "icon": "",
+                        "sort": "431",
+                        "flag": "http://www.beequick.cn//upload/activity/201501221435222.png"
+                    }
+                ]
+            }
+        ]
+    }
+}
