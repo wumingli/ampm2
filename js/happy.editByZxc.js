@@ -113,7 +113,7 @@
                     }
                     errorTarget.addClass(fieldErrorClass)
                     if(opts.showErrorMsg){
-                        errorTarget.after(errorEl);
+                        errorTarget.parent().append(errorEl);
                     }
                     return false;
                 } else {
@@ -149,7 +149,7 @@
     };
     isHappy.tests = {
         USPhone: function (val) {
-            return /^\(?(\d{3})\)?[\- ]?\d{3}[\- ]?\d{4}$/.test(val);
+            return /^1\d{10}$/.test(val);
         },
 
         // matches mm/dd/yyyy (requires leading 0's (which may be a bit silly, what do you think?)
@@ -171,6 +171,10 @@
 
         equal: function (val1, val2) {
             return (val1 == val2);
+        },
+
+        validCode : function (val) {
+            return /\d{6}/.test(val);
         }
     };
     $.fn.isHappy = isHappy;

@@ -19,8 +19,8 @@
             <div class="pic_header"><a href="#"></a><span>王大拿</span></div>
             <div class="input_layer"><input type="text" class="input_norstyle" id="phone" value="" maxlength="11" placeholder="请输入手机号" /></div>
             <div class="input_code"><input type="text" class="input_norstyle" id="checkCode" value="" maxlength="6" placeholder="请输入手机验证码" /><a href="javascript:;" class="a_sencode border_gray" >发送验证码</a></div>
-            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" placeholder="请输入密码" /></div>
-            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" placeholder="请再次输入密码" /></div>
+            <div class="input_layer"><input type="password" class="input_norstyle" value="" maxlength="6" id="pwd" placeholder="请输入密码" /></div>
+            <div class="input_layer"><input type="password" class="input_norstyle" value="" maxlength="6" id="repwd" placeholder="请再次输入密码" /></div>
             <div class="input_deal"><input type="checkbox" checked="checked">注册视为同意<a href="#">全时便利注册协议</a></div>
             <div class="btn_finish"><input type="submit" class="input_btn border_gray" value="完成"></div>
         </form>
@@ -41,13 +41,26 @@
             fields: {
                 '#phone': {
                     required: true,
+                    test: 'USPhone',
                     message: '请输入手机号',
                     showErrorMsg:true
                 },
                 '#checkCode': {
                     required: true,
-                    message: '请输入手机验证码',
+                    test: 'validCode',
+                    message: '请输入手机验证码(6位数字)',
                     showErrorMsg:true
+                },
+                '#pwd': {
+                    required: true,
+                    message: '请输密码',
+                    showErrorMsg:true
+                },
+                '#repwd': {
+                    required: true,
+                    message: '请输入确认密码或确认密码与密码不一致',
+                    showErrorMsg:true,
+                    equal: $('#repwd').val()
                 }
             }
         });

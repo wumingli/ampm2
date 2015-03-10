@@ -139,3 +139,5 @@ a,a:hover{color:#333;}
 
 /*遮罩层*/
 .m_opacity_layer{ position:fixed; left:0; top:0; right:0; bottom:0; background:#000; opacity:.4}
+
+.unhappyMessage {font-size: 28px; color: #f30; display: block; padding-top: 15px;}
