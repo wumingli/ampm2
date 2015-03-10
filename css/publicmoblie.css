@@ -91,9 +91,30 @@ a,a:hover{color:#333;}
 /*list content*/
 /*list content   left*/
 .m_list_wp{background:#fff;border-top:1px solid #b2b2b2;overflow: hidden;}
-.m_menu_list{width: 31%;border-right: 1px solid #b2b2b2;float: left;text-align: center;color: #5b5b5b;font-family:Arial,"微软雅黑";
-  margin-bottom:-3000px; padding-bottom:3000px;
+.m_menu_list {
+    width: 31%;
+    border-right: 1px solid #b2b2b2;
+    float: left;
+    text-align: center;
+    color: #5b5b5b;
+    font-family: Arial, "微软雅黑";
+    margin-bottom: -3000px;
+    padding-bottom: 3000px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
 }
+
+.m_menu_list.out {
+    transform: translate(-100%,0);
+}
+
+.m_menu_list.list-in {
+    transform: translate(0, 0);
+}
+
+
+
+
 /*.m_menu_list dl{display: table;text-align: center;width: 100%;}*/
 .s_menu_dl dt,.s_menu_dl dd{border-bottom: 1px solid #b2b2b2; display: table;vertical-align: middle;width: 100%;}
 .s_menu_dl dt{height:64px;}

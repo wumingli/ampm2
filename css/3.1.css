@@ -23,7 +23,7 @@ padding: 10px 1%;line-height: 2.6rem;vertical-align: middle;margin-right: 10px;w
 .add_cont_l i{margin-right: 6px;}
 .add_cont_l strong{font-size:2.4rem;font-weight: normal;line-height:40px;padding-right: 15px;}
 .add_cont_l span,.add_cont_l em{display:block;font-size:1.8rem;font-weight: normal;}
-.add_cont_l span{line-height:26px;width:width:80%;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.add_cont_l span{line-height:26px;width:80%;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .add_cont_l em{line-height: 26px;}
 .add_cont_r{width: 20%;text-align: right;}
 .a_link_red{background: #ec3341;border-radius:2px;color: #fff;font-size:2.2rem;font-family: Arial,"微软雅黑";padding:7px 0;text-align: center; }
