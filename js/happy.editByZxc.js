@@ -178,4 +178,4 @@
         }
     };
     $.fn.isHappy = isHappy;
-})(this.Zepto);
+})(this.jQuery || this.Zepto);
