@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+
+.ad_pic{width:100%;border-top:1px solid #a1a1a1;}
+.ad_pic img{display:block;width:100%;}
+.m_list_wp{border:none;}
+.pic_list{width:100%;}
+.pic_list li{
+	width: 90%;
+	margin:0 auto 10px;
+	padding:2%;
+	display:table;
+	overflow: hidden;
+	border: 1px solid #b2b0b0;
+}
+.pic_list_left{
+	width: 25%;
+	display:table-cell;vertical-align:middle;
+}
+.pic_list_left img{
+	border: 1px solid #444041;
+	width: 164px;
+	height: 164px;
+
+}
+.pic_list_right{
+	width: 72%;
+	padding-left:3%;
+	position: relative;
+	display:table-cell;
+	font-family:Arial,"Microsoft YaHei";
+}
+.pic_list_right_text{
+	text-align: left;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2.4rem;
+}
+.pic_list_right_text2{
+	text-align: left;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2rem;
+}
+.pic_list_right_type{
+	font-size:2.1rem;
+	color:#5d5d5d;
+}
+.pic_list_right_price{
+	text-align: left;
+	color: #e83548;
+	margin-top: 1rem;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 5rem;
+}
+.pic_list_right_number{
+
+	
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	text-align: right;
+	z-index: 5;
+
+}
+.number{
+	vertical-align: middle;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 3rem;
+}
+
+ .u-icon-add,.u-icon-reduce{ display:inline-block; width:37px; height:37px; background-image:url(../img/control_icon.gif); background-repeat:no-repeat; vertical-align:middle}
+
+ .u-icon-add{ background-position:right center}
+ .u-icon-reduce{ background-position:left center}
+
+/*专题页*/
+.obj_list{width:100%;background:#e3e3e3;padding:10px 0 0;}
+.obj_list li{width:96%;background:#fff;margin:0 auto 15px;padding-top:15px;font-family:Arial,"Microsoft YaHei";border: 1px #efefef solid;}
+.obj_list strong{font-size:2.4rem;line-height: 2.4rem; color:#5d5d5d;display:block;border-bottom:1px solid #ebebeb;font-weight:normal;width:92%;margin:0 auto;padding:10px 0;}
+
+.obj_img_bor{position:relative;width:92%;margin:0 auto;overflow:hidden;}
+.icon_border01{display:block;width:98%;border-bottom:5px dotted #fff;position:absolute;top:-2px;left:0;margin:0 1%;}
+.icon_border02{width:24px;height:24px;border-radius:50%;display:block; background:#fff;position:absolute;top:50%;left:-12px;margin-top:-12px;}
+.icon_border03{width:24px;height:24px;border-radius:50%;display:block; background:#fff;position:absolute;top:50%;right:-12px;margin-top:-12px;}
+.obj_img_bor img{width:100%;}
+
+.obj_linst_price{width:92%;margin:0 auto;overflow:hidden;padding:10px 0; }
+.obj_linst_price em{color:#eb3341;font-size:2.4rem;font-weight:normal;line-height: 2.4rem;padding-right: 18px; }
+.obj_linst_price i{text-decoration: line-through; color: #686868;font-size: 2rem;padding-top: 5px;display: inline-block;}
+.obj_linst_price a{float:right;display: inline-block; background: #eb3341;color: #fff;font-size:2.2rem;line-height:2.2rem;border-radius:15px;padding:4px 18px;}
+
+/*弹出框*/
+.integral_hide{ width:428px; height:240px;padding:10px 16px;font-family:Arial,"Microsoft YaHei";  background:#fff; position:fixed; z-index:999;
+	 border-radius:10px;top: 50%;left:50%;margin-top: -130px;margin-left:-230px; }
+.m-title{ font-size:2.6rem; color:#5d5d5d; border-bottom:1px #999999 solid; line-height:1.6; text-align:center; vertical-align:middle; position:relative;}
+.m-title a{vertical-align:middle;line-height:1.6; position:absolute; left:0; top:5px}
+.m-content{ margin-top:8px; text-align:center;width: 80%;margin:0 auto;}
+.m-content em{color: #b3b3b3;font-size: 2rem;display: block;}
+.m-content span{color: #5d5d5d;font-size: 4rem;display: block;}
+.m-content input{width: 74%;border-radius: 4px;padding: 2% 3%;border:1px #cccccc solid;font-size: 2rem;background:#fff;}
+.integral_btn{width: 64%;margin: 0 auto;padding: 4% 0 0;}
+.btn_cancal,.btn_convert{border-radius: 2px;padding: 2% 10%;font-family:Arial,"Microsoft YaHei";font-size: 2rem;}
+.btn_cancal{color: #5d5d5d;background: #f2f2f2;border:1px solid #9d9b9b;margin-right: 30%;}
+.btn_convert{color: #fff;background: #eb3341;border:none;}
+
+.m-content input::-webkit-input-placeholder { 
+	color: #b2b2b2; 
+	-webkit-transition: color.5s; 
+} 
+.m-content input:hover::-webkit-input-placeholder { 
+	color: #e0e0e0; 
+	-webkit-transition: color.5s; 
+} 
+
+
+.input_paswd{width: 70%;text-align: center;margin: 0 auto;}
+
+.input_paswd span{display:inline-block; width:35px; height:35px;border-radius: 4px; border: 1px solid #e0e0e0;margin: 0 5px;font-size: 2.2rem;text-align: center;}
+.tk_tips{color: #353535;font-size: 2.2rem;padding-top:20px;text-align: center;}
+.tk_tips a{color:#fb3939;}

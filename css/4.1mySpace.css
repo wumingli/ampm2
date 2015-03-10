@@ -1,0 +1,134 @@
+/* 
+*   @author: mistletoe
+*   @date: 2015-3-1
+*   @discription: f-功能 m-模块 u-原件 z-时间 s-皮肤
+*				  个人中心模块
+*/
+.mt_b12{margin-top: 12%;}
+
+
+/*用户信息*/
+.m-user-info{ background:#eb3341; width:100%;}
+.m-user-info .m-wrap{ padding:5% 5% 6%;}
+.m-user-info .m-wrap .m-user-face{ float:left}
+.m-user-info .m-wrap .m-user-face p{ font-size:2.6rem; text-align:center; line-height:2; color:#fff}
+.m-user-info .m-wrap .u-userface{ width:138px; height:138px; border-radius:10px; border:4px #fff solid;}
+
+.m-user-info .m-wrap .m-code{ float:left; text-align:center}
+.m-user-info .m-wrap .m-code p{ font-size:2.2rem; text-align:center; line-height:2; color:#fff}
+.m-user-info .m-wrap .m-user-other h3 a{display: block; color:#fff;}
+.m-user-info .m-wrap .u-code{ width:138px; height:138px; border-radius:0; border:4px #fff solid;}
+
+
+.m-user-info .m-wrap .m-recharge{ float:left; text-align:center; padding:20px 10px 0 40px}
+.m-user-info .m-wrap .m-recharge p{ font-size:2.5rem; color:#fff}
+.m-user-info .m-wrap .m-other{ width:67%!important;}
+
+.m-user-info .m-wrap .m-user-other{ width:58%; float:right; position:relative}
+.m-user-info .m-wrap .m-user-other h3,.m-user-info .m-wrap .m-user-other p{ color:#fff;}
+.m-user-info .m-wrap .m-user-other p{ font-size:2.4rem}
+.m-user-info .m-wrap .m-user-other h3{ font-weight:normal; font-size:9rem;}
+.m-user-info .m-wrap .m-user-other .u-arr-right{ right:10px; color:#fff; font-size:4rem; position:absolute; top:65px; font-family:'宋体'}
+
+/*图片菜单*/
+.m-func-lst{ width:33.33%; height:190px; float:left; background:#fff}
+.m-func-lst .m-itm{height:190px;  border-right:1px #b2b2b2 solid; position:relative}
+.m-func-lst .u-icon-order,.m-func-lst .u-icon-cash,.m-func-lst .u-icon-code{ background-image:url(../img/user_info_icon.png); background-repeat:no-repeat; width:103px; margin:0 auto; top:20px; position:relative; padding-top:115px}
+
+.m-func-lst p{ text-align:center; font-size:2.6rem}
+.m-func-lst .u-icon-order{ background-position:left top;}
+.m-func-lst .u-icon-cash{ background-position:center top}
+.m-func-lst .u-icon-code{background-position:right top}
+
+
+/*用户功能列表*/
+.m-uc-lst{ background:#fff; margin-top:20px;font-family:Arial,"微软雅黑";}
+.m-uc-lst ul{}
+.m-uc-lst ul li{ height:80px; border-top:1px #b2b2b2 solid; vertical-align:middle; line-height:80px; font-size:3rem; padding:0 20px; color:#5d5d5d; position:relative}
+
+.m-uc-lst ul li a{ color:#5d5d5d;display: block;}
+.m-uc-lst ul li  .u-btn-more{ font-family:'宋体'; vertical-align:middle; width:14px; height:22px; background:url(../img/arr_icon_right2.png) center center no-repeat;
+ position:absolute; right:5%; top:40%;}
+.m-uc-lst ul li:last-child{ border-bottom:1px #b2b2b2 solid}
+
+.m-uc-lst ul li em{ font-size:2.2rem; padding-right:8%; color:#eb3341}
+
+.m-uc-lst ul li .f1,.m-uc-lst ul li .f2,.m-uc-lst ul li .f3,.m-uc-lst ul li .f4,.m-uc-lst ul li .f5,.m-uc-lst ul li .f6{ background-image:url(../img/user_func_icon.gif); background-repeat:no-repeat; width:39px; height:45px; display:inline-block; vertical-align:middle; margin-right:10px;}
+.m-uc-lst ul li .f1{ background-position:left center}
+.m-uc-lst ul li .f2{ background-position:-39px center}
+.m-uc-lst ul li .f3{ background-position:-78px center}
+.m-uc-lst ul li .f4{ background-position:-117px center}
+.m-uc-lst ul li .f5{ background-position:-156px center}
+.m-uc-lst ul li .f6{ background-position:-195px center}
+
+
+
+
+
+/*我的订单*/
+.m-order-tab{font-family:Arial,"微软雅黑";}
+.m-order-tab .m-title{ background:#fff; height:50px; border-bottom:1px #b3b3b3 solid}
+.m-order-tab .m-title .m-btn{ width:50%; display:inline-block; text-align:center; float:left;}
+.m-order-tab .m-title .m-btn a{ display:inline-block; height:48px; line-height:48px; border-bottom:2px #fff solid; width:120px; font-size:2.6rem; color:#5d5d5d}
+.m-order-tab .m-title .m-btn a.z-cur{ display:inline-block; height:48px; border-bottom:2px #eb3341 solid; color:#eb3341}
+.m-order-tab .m-context{ }
+.m-order-tab .m-context ul{}
+.m-order-tab .m-context ul li{ height:220px; border:1px #b2b2b2 solid; border-left:0; border-right:0; background:#fff; margin:10px 0; position:relative;}
+
+.m-order-tab .m-context ul li .m-l{ width:25%; display:inline-block; text-align:center; height:200px; vertical-align:middle}
+.m-order-tab .m-context ul li .m-c{ width:65%; display:inline-block; padding-top:26px; }
+.m-order-tab .m-context ul li .m-c h3{ font-size:2.6rem; font-weight:normal;}
+.m-order-tab .m-context ul li .m-c p{font-size:2.2rem; line-height:1.6 ; color:#5d5d5d}
+.m-order-tab .m-context ul li .m-c .u-arr-right{ position:absolute; right:20px; top:90px;}
+
+
+
+/*在线充值*/
+.m-charge{font-family:Arial,"微软雅黑";}
+.m-charge dl{}
+.m-charge dl dt{ color:#eb3341; font-size:2.4rem; padding:0 50px; line-height:3.2; border-bottom:1px #b2b2b2 solid }
+.m-charge dl dd,.m-charge dl dd.s2{ margin:10px 0; height:100px; background:#fff; border-bottom:1px #b2b2b2 solid; border-top:1px #b2b2b2 solid; padding:0 160px; vertical-align:middle}
+.m-charge dl dd label,.m-charge dl dd input{ vertical-align:middle; height:100px; margin-right:5px;}
+.m-charge dl dd.s2{ padding:0 44px;}
+.m-charge dl dd img{ vertical-align:middle;}
+.m-charge dl dd p{ font-size:2.1rem; padding-top:10px; color:#424242}
+
+/*充值成功*/
+.m-pay-success{ text-align:center; margin-top:80px;font-family:Arial,"微软雅黑";}
+.m-pay-success p{ font-size:3.6rem; color:#c1c1c2; margin-top:20px;}
+
+
+/*充值*/
+.m-charge-form{ width: 84%;margin: 0 auto;font-family:Arial,"微软雅黑";}
+.m-charge-form .m-itm{ margin-top:20px;width: 100%;}
+.m-charge-form .m-itm label{ font-size:2.8rem; color:#eb3341; vertical-align:middle;width: 15%;}
+.m-charge-form .m-itm  input{ padding:4% 3%; font-size:2.8rem; background:#FFF;width:75%;line-height: 2.8rem;
+	 border:3px #b3b3b3 solid; border-radius:5px; display:inline-block; vertical-align:middle;font-family:Arial,"微软雅黑";}
+
+.m-charge-form .m-itm h3{ font-size:2.8rem; color:#eb3341; font-weight:normal;padding:0 40px; line-height:1.5}
+.m-charge-form .m-itm p.u-ts{ line-height:1.4; font-size:2.4rem; text-align:left; margin-top:20px; color:#5d5d5d; padding:0 40px;}
+
+/*支付码*/
+.m-pay-wp{width: 100%;padding:10% 0 0 	;font-family:Arial,"微软雅黑";}
+.u-pay-h3{ font-size:2.8rem; line-height:50px; text-align:center; height:50px;}
+.m-pay-page{ width:522px; height:601px; background:url(../img/pay_code_bg.png) center  no-repeat; margin:0 auto;}
+.m-pay-page .m-top-code{ padding-top:70px; padding-bottom:50px; text-align:center; margin-top:30px;}
+.m-pay-page .m-top-code img{ height:133px;}
+.m-pay-page .m-down-code{ padding-top:39px; text-align:center}
+.m-pay-page .m-down-code img{ width:238px; height:238px;}
+ /*倒计时*/
+.m-down-countdown{ text-align:center; width:80%; margin:0 auto;display: block;padding: 5% 0 20%;font-family:Arial,"微软雅黑";}
+.m-down-countdown p{font-size:2.3rem; line-height:1.8; color:#9a9898;}
+.m-down-countdown .u-timebox{ height:7px; line-height:7px; width:100%; background:#bcbcbc; border-radius:5px; margin:0 auto; position:relative; overflow:hidden}
+.m-down-countdown .u-timebox .u-bar{ background:#eb3341; line-height:7px; height:7px; position:absolute;
+ left:0; top:0; bottom:0; display:inline-block; border-radius:5px}
+
+ .m-itm  input::-webkit-input-placeholder
+ { 
+	color: #b2b2b2; 
+	-webkit-transition: color.5s; 
+} 
+.m-itm  input:focus::-webkit-input-placeholder{ 
+	color: #e0e0e0; 
+	-webkit-transition: color.5s; 
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+body{background:#f2f1ef;}
+.layout{
+	background: #f2f2f2;
+}
+.clearHeight{
+	width: 100%;
+	height: auto;
+	clear: both;
+	overflow: hidden;
+}
+
+.article_border{
+	width: 94%;
+	position: relative;
+	padding:3%;
+	background: #ffffff;
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+	overflow: hidden;
+	
+}
+.article_border_text1{
+	float: left;
+	clear: both;
+	font-family:Arial,"Microsoft YaHei"; 
+	font-size: 3.5rem;
+	color: #2c2c2c;
+}
+.article_border_text2{
+	
+	margin-top: 5px;
+	font-family:Arial,"Microsoft YaHei";	
+	font-size: 2.5rem;
+	color: #5c5c5c;
+	text-align: left;
+}
+
+.btnPay{
+	width: 155px;
+	height: 50px;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2.2rem;
+	color: #5d5d5d;
+	text-decoration: underline;
+	text-align: center;
+	line-height: 50px;
+	display: inline-block;
+}
+.btnBorder{
+	width: 365px;
+	height: 50px;
+	text-align: center;
+	margin: 25px auto 0 auto;
+}
+.sendPhone{
+	width: 108px;
+	height: 39px;
+	line-height: 39px;
+	display: inline-block;
+	margin-top: 15px;
+	font-size: 2.2rem;
+	border-radius: 5px;
+	background: #ffffff;
+	color: #5d5d5d;
+	border: 2px solid #ed313f;
+	text-align: center;
+}
+.payPassword{
+	width: 175px;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 4rem;
+	font-size: 2.8rem;
+	color: #5d5d5d;
+	margin: 0 auto;
+	background:url(../img/key.jpg) left center no-repeat;
+}

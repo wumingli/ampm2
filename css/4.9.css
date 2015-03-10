@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+
+body{
+	background: #f2f2f2;
+}
+.clearHeight{
+	width: 100%;
+	height: auto;
+	clear: both;
+	overflow: hidden;
+}
+.article_border{
+	width: 94%;
+	position: relative;
+	padding: 3% 3% 5%;
+	background: #ffffff;
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+	
+}
+.alert_add_title{
+	font-family:Arial,"Microsoft YaHei";	
+	font-size: 2.5rem;
+	color: #5c5c5c;
+	border-bottom: 1px solid #b2b2b2;
+	padding-bottom:3%;
+	padding-left: 3%;
+}
+.alert_add_list{
+width: 100%;
+}
+.alert_add_list li{
+width: 90%;
+border-bottom: 1px solid #b2b2b2;
+position: relative;
+padding: 3% 0 3% 10%;
+}
+.article_border_text1{
+	float: left;
+	clear: both;
+	font-family:Arial,"Microsoft YaHei"; 
+	font-size: 3.5rem;
+	color: #2c2c2c;
+}
+.article_border_text2{
+	
+	
+	margin-top: 5px;
+	font-family:Arial,"Microsoft YaHei";	
+	font-size: 2.5rem;
+	color: #5c5c5c;
+}
+.article_border_text3{
+	margin-top: 5px;
+	float: left;
+	font-family:Arial,"Microsoft YaHei";	
+	font-size: 2.5rem;
+	color: #5c5c5c;
+}
+.article_border_text4{
+	margin-top: 5px;
+	float: right;
+	margin-right: 38px;
+	font-family:Arial,"Microsoft YaHei";	
+	font-size: 2.5rem;
+	color: #5c5c5c;
+}
+.article_border_text4 span{
+	margin-left: 30px;
+}
+.article_border_two{
+	letter-spacing: 4.8rem;
+}
+.article_border_there{
+	letter-spacing: 1.4rem;
+}
+.article_border_four{
+	letter-spacing: 0.2rem;
+}
+.article_border_text2 span{
+	font-family:Arial,"Microsoft YaHei";
+	letter-spacing: 0px;
+	font-size: 2.2rem;
+	color: #5c5c5c;
+}
+.article_border_text2 span.mLeft{
+	margin-left: 25px;
+}
+.article_border_text2 span.sSelect{
+	position: relative;
+	display: inline-block;
+	padding-right: 25px;
+	background:url(../img/selectArrow.png) right 12px no-repeat;
+}
+.sSelectShow{
+	width: 92px;
+	height: 100px;
+	overflow: auto;
+	background: #fff;
+	display: none;
+	border: 1px solid #666;
+	position: absolute;
+	left: 0px;
+	top: 27px;
+	z-index: 5;
+}
+.sSelectShow a{
+	line-height: 35px;
+}
+.article_border_text2 span.red{
+	color:#eb2a29;
+}
+.article_border_text2 span.gray{
+	color:#989898;
+}
+
+
+.canelOrderGray{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -12px;
+	background: #ffffff;
+	border: 2px solid #b4b4b4;
+	border-radius:25px; 
+}
+.canelOrderRed{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -12px;
+	background: #ec3341;
+	border: 2px solid #b4b4b4;
+	border-radius:25px; 
+}
+.btnRed {
+	width: 120px;
+	height: 40px;
+	font-family: Arial,"Microsoft YaHei";
+	font-size: 2.2rem;
+	border-radius: 5px;
+	border: 1px solid #b2b4b1;
+	background: #ec3341;
+	color: #fff;
+	text-align: center;
+	line-height: 39px;
+	display: block;
+	position: absolute;
+	right:5%;
+	top: 50%;
+	margin-top: -20px;
+	z-index: 5;
+}
+.btnRed:hover{color: #fff;}

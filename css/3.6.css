@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+
+
+/*list content   right*/
+.m_show_wp{width: 600px; position: relative; margin: 0 auto;}
+.pic_list{text-align: center;}
+
+.pic_list a img{display: block;width: 100%;border: 1px solid #444041;}
+.pic_list li{
+	display:table;
+	width: 96%;
+	margin:0 auto 10px;
+	padding:15px 2%;
+	overflow: hidden;
+	border-bottom: 1px solid #b2b2b2;
+}
+.pic_list_left{
+	width: 35%;
+	display:table-cell;vertical-align:middle;
+}
+.pic_list_right{
+	width: 62%;
+	padding-left:3%;
+	position: relative;
+	display:table-cell;
+	font-family:Arial,"Microsoft YaHei";
+}
+.pic_list_right_text{
+	width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	text-align: left;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2.5rem;
+}
+.pic_list_right_text2{
+	text-align: left;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2rem;
+}
+.pic_list_right_price{
+	text-align: left;
+	color: #e83548;
+	position: absolute;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2.8rem;
+	bottom: 0;
+	left: 3%;
+	
+}
+.pic_list_right_number{
+
+	
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	text-align: right;
+	z-index: 5;
+
+}
+
+.number{
+	vertical-align: middle;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 3rem;
+}
+
+ .u-icon-add,.u-icon-reduce{ display:inline-block; width:37px; height:37px; background-image:url(../img/control_icon.gif); background-repeat:no-repeat; vertical-align:middle}
+
+ .u-icon-add{ background-position:right center}
+ .u-icon-reduce{ background-position:left center}
+
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/viewport.js"></script>
+<script type="text/javascript" src="js/publicmoblie.js"></script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--nec-->
+<link rel="stylesheet" type="text/css" href="css/functions.css">
+<link rel="stylesheet" type="text/css" href="css/media.css">
+<!--/nec-->
+
+<link rel="stylesheet" type="text/css" href="css/publicmoblie.css" />
+<link rel="stylesheet" type="text/css" href="css/3.2index.css" />
+
+
+
+</head>
+<body>
+
+<div class="layout">
+	<div class="m-container">
+    <header class="m_gps_store">
+        <a href="javascript:;" class="a_perceter"></a><span class="gps_store"><i class="icon_gps"></i>永安里店<i class="icon_drop"></i></span>
+        <div class="m_gps_hide" >
+        <i class="m_gps_close">X</i>
+            <div class="hide_title">切换位置</div>
+            <div class="hide_select">
+                <select class="select_leve01" date-role="none"><option>北京市</option><option>上海市</option></select>
+                <select class="select_leve02"><option>东城区</option></select>
+            </div>
+            <div class="hide_search clear">
+                <input type="search" class="input_search" value="请输入您的具体地址"><input type="button" class="btn_enter_sech" value="确定">
+            </div>
+            <div class="hide_title"><i class="icon_gps"></i>定位到当前位置</div>
+            <dl class="near_add_list">
+                <dt>历史位置</dt>
+                <dd>
+                    <em>万达广场</em>
+                    <span>地址地址地址地址</span>
+                    <span>211-2234343434</span>
+                    <i>323km</i>
+                </dd>
+                <dd>
+                    <em>万达广场</em>
+                    <span>地址地址地址地址</span>
+                    <span>211-2234343434</span>
+                    <i>323km</i>
+                </dd>
+            </dl>
+        </div>
+    </header>
+    <section class="m_list_wp mt_15 clear">
+        <aside class="m_menu_list">
+            <dl class="s_menu_dl">
+                <dt state="open"><a href="javascript:;"><i class="icon iconfont">&#xe607;</i> 优惠大促</a></dt>
+            </dl>
+             <dl  class="s_menu_dl s_menu_dl01">
+                <dt state="close"><a href="javascript:;" ><i class="icon iconfont">&#xe608;</i>外卖餐饮</a></dt>
+                <dd style="display:none">
+                    <a href="javascript:;">早餐<span>(6:30-10:00)</span></a>
+                    <a href="javascript:;">午餐<span>(10:00-14:00)</span></a>
+                    <a href="javascript:;">晚餐<span>(15:00-21:00)</span></a>
+                </dd>
+            </dl>
+            <dl  class="s_menu_dl">
+                <dt state="close"><a href="javascript:;"><i class="icon iconfont">&#xe606;</i>商品超市</a></dt>
+                <dd style="display:none">
+                    <a href="javascript:;">即食</a>
+                    <a href="javascript:;">零食</a>
+                    <a href="javascript:;">饮料</a>
+                    <a href="javascript:;">酒水</a>
+                    <a href="javascript:;">日用</a>
+                </dd>
+            </dl>
+            <dl  class="s_menu_dl">
+                <dt state="close"><a href="javascript:;"><i class="icon iconfont">&#xe609;</i>凑单专区</a></dt>
+                <dd style="display:none"><a href="javascript:;">凑单把</a></dd>
+            </dl>
+        </aside>
+        <article class="m_show_wp">
+            <ul class="pic_list mt_15">
+               <li><a href="javascript:;"><img src="images/pic_410x189.jpg" alt="全时促销"></a></li> 
+               <li><a href="javascript:;"><img src="images/pic_410x189.jpg" alt="全时促销"></a></li>  
+               <li><a href="javascript:;"><img src="images/pic_410x189.jpg" alt="全时促销"></a></li>  
+               <li><a href="javascript:;"><img src="images/pic_410x189.jpg" alt="全时促销"></a></li>  
+               <li><a href="javascript:;"><img src="images/pic_410x189.jpg" alt="全时促销"></a></li>      
+            </ul>
+        </article>
+    </section>
+    </div>
+       <!-- 购物车 -->
+      <footer class="shop_car">
+        <div class="shop_car_brief">
+            <div class="car_btn_rg">
+               <input type="submit" class="btn-order" value="选好了"  /><!--购物车按钮 更换value 值即可-->
+               <span class="text" style="display:none">满30元起送</span> <!-- 默认隐藏 -->    
+            </div>
+            <!--点击icon_shopCar 购物产品列表展示 -->
+             <div class="icon_shopCar" ><i class="car_count">3</i></div>
+            <p>购物车是空的</p>
+            <p>购物满¥58元，免配送费</p>
+        </div>
+        <div class="shop_car_listshow" style="display:none"><!-- 购物产品列表 默认隐藏 -->
+            <div class="link_right"><a href="javascript:;" id="a_link_enter">确定</a></div>
+            <ul class="pro_count_list">
+                <li><strong>费列罗二十四粒钻石装</strong><em>￥30</em><span class="pro_count"><i class="icon_sub">-</i><i class="pro_count_text">1</i><i  class="icon_add">+</i></span></li>
+                <li><strong>费列罗二十四粒钻石装</strong><em>￥30</em><span class="pro_count"><i class="icon_sub">-</i><i class="pro_count_text">1</i><i  class="icon_add">+</i></span></li>
+                <li><strong>费列罗二十四粒钻石装</strong><em>￥30</em><span class="pro_count"><i class="icon_sub">-</i><i class="pro_count_text">1</i><i  class="icon_add">+</i></span></li>
+            </ul>
+        </div>
+    </footer>  
+     
+</div>
+<!--返回顶部-->
+<a href="javascript:;" class="u-btn-top" style="display:none;"><i class="icon iconfont">&#xe60e;</i></a>   
+<!--遮罩层style="display:none"-->
+<div class="m_opacity_layer" ></div>
+</body>
+
+</html>
+

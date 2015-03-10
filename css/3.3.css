@@ -1,0 +1,51 @@
+/* 
+*   @author: mistletoe
+*   @date: 2015-3-2
+*   @discription: f-功能 m-模块 u-原件 z-时间 s-皮肤
+×				  商品列表页 需要加入3.2index.CSS
+*/
+
+.m-goodslst{ float:right; width:68%}
+.m-goodslst .m-cue{ border-bottom:1px #b2b2b2 solid; padding-bottom:10px;}
+.m-goodslst .m-cue p{ color:#eb3341; font-size:2rem}
+
+
+/*分类列表*/
+.m-goodslst dl.m-categroy-lst{ margin-top:10px;}
+.m-goodslst dl.m-categroy-lst dt{ height:41px; line-height:41px; background:#eb3341; font-size:2.4rem; color:#fff; padding:0 10px}
+.m-goodslst dl.m-categroy-lst dt i{color:#fff!important}
+.m-goodslst dl.m-categroy-lst dd{ border-bottom:1px #b2b2b2 solid
+}
+.m-goodslst dl.m-categroy-lst dd .m-itm{ padding:10px 0}
+
+.m-goodslst dl.m-categroy-lst dd .m-pic2{border:1px #b2b2b2 solid; margin-right:10px}
+.m-goodslst dl.m-categroy-lst dd .m-pic2 img{ width:164px; height:164px; }
+
+.m-goodslst dl.m-categroy-lst dd .m-itm h3,.m-goodslst dl.m-categroy-lst dd .m-itm h3 a{ font-size:2.2rem; color:#000000; font-weight:normal}
+.m-goodslst dl.m-categroy-lst dd .m-itm p{ font-size:2rem; padding-top:28px; color:#5d5d5d}
+
+.m-goodslst dl.m-categroy-lst dd .m-itm .p2{ font-size:2rem; padding-top:10px; color:#5d5d5d}
+.m-goodslst dl.m-categroy-lst dd .m-itm .u-pic{ float:right; width:74px; height:74px; border:1px #b2b2b2 solid}
+
+.m-goodslst dl.m-categroy-lst dd .m-itm .mt129{ margin-top:129px!important; position:absolute; right:10px}
+
+.m-goodslst dl.m-categroy-lst dd .m-itm .m-control{ font-size:2.9rem; vertical-align:middle; margin-top:15px;}
+
+ .u-icon-add,.u-icon-reduce{ display:inline-block; width:37px; height:37px; background-image:url(../img/control_icon.gif); background-repeat:no-repeat; vertical-align:middle}
+
+.number{
+	vertical-align: middle;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 3rem;
+}
+
+ .u-icon-add,.u-icon-reduce{ display:inline-block; width:37px; height:37px; background-image:url(../img/control_icon.gif); background-repeat:no-repeat; vertical-align:middle}
+
+ .u-icon-add{ background-position:right center}
+ .u-icon-reduce{ background-position:left center}
+
+.m-goodslst .m-order-nd{ margin-top:10px;}
+.m-goodslst .m-order-nd{ font-size:2rem; line-height:39px; vertical-align:middle; }
+.m-goodslst .m-order-nd input.u-typeNum{ border-radius:5px; border:1px #eb3341 solid;width:26px; height:20px; line-height:20px; 
+			color:#666; font-size:2rem; vertical-align:middle;padding: 5px 5px;}
