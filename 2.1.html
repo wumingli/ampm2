@@ -11,20 +11,16 @@
     <!--/nec-->
     <link rel="stylesheet" type="text/css" href="css/publicmoblie.css"/>
     <link rel="stylesheet" type="text/css" href="css/4.1safety.css"/>
+<link rel="stylesheet" type="text/css" href="css/error.css" />
 </head>
 <body>
 <div class="layout">
     <section class="inputin_wp">
-        <form data-parsley-validate>
+        <form>
             <div class="input_in"><label><i class="icon iconfont">&#xe600;</i>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</label><input
-                    type="text" class="input_norstyle" value="" maxlength="11" required placeholder="请输入收货人真实姓名"/></div>
+                    type="text" class="input_norstyle" value="" maxlength="11" placeholder="请输入收货人真实姓名" id="realname" /></div>
             <div class="input_in"><label><i class="icon iconfont">&#xe601;</i>手机号码:</label><input type="text"
-                                                                                                  class="input_norstyle"
-                                                                                                  value="" maxlength="6"
-                                                                                                  required
-                                                                                                  placeholder="请输入您的手机号码"/>
-            </div>
-            <div class="input_select"><i class="icon iconfont">&#xe602;</i><select>
+            <div class="input_select" id="phone"><i class="icon iconfont">&#xe602;</i><select>
                 <option>北京市</option>
             </select><select>
                 <option>北京市</option>
@@ -42,15 +38,12 @@
                 <option>昌平区</option>
                 <option>顺义区</option>
             </select></div>
-            <div class="input_select"><input type="text" class="input_norstyle" value="" maxlength="40"
-                                             required="required" placeholder="请输入您的具体地址"/></div>
+            <div class="input_select"><input type="text" class="input_norstyle" value="" maxlength="40" placeholder="请输入您的具体地址" id="address" /></div>
             <div class="btn_finish"><input type="submit" class="input_btn border_gray" value="保存"></div>
         </form>
     </section>
 
 </div>
-
-</body>
 <div class="m-user-copyright">
     <div>
         <p>客服电话：400-080-6611</p>
@@ -58,5 +51,32 @@
         <p>copyright &copy; 2015-2020 全时便利</p>
     </div>
 </div>
+<script type="text/javascript" src="js/happy.editByZxc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('form').isHappy({
+            fields: {
+                '#realname': {
+                    required: true,
+                    message: '请输入收货人真实姓名',
+                    showErrorMsg:true
+                },
+                '#phone': {
+                    required: true,
+                    test: 'USPhone',
+                    message: '请输入手机号',
+                    showErrorMsg:true
+                },
+                '#address': {
+                    required: true,
+                    message: '请输入详细地址',
+                    showErrorMsg:true
+                }
+            }
+        });
+    });
+</script>
+
+</body>
 </html>
 
