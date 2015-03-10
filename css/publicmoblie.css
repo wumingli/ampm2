@@ -40,6 +40,9 @@ a,a:hover{color:#333;}
   margin: 0 auto;
   position: relative;
   background:#f2f2f2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  min-height:100%;
 }
 
 
@@ -56,7 +59,7 @@ a,a:hover{color:#333;}
 .icon_redf{background:#eb3242;}
 .icon_bluef{background:#00affd;}
 .icon_yelwf{background:#edb73d;}
-.m-container{ padding-bottom:80px;}
+.m-container{ padding-bottom:80px;-webkit-transition: all 0.5s;transition: all 0.5s;}
 /*btn*/
 .btn-order{ width:170px; height:52px;  border-radius:5px; -webkit-border-radius:5px; background:#fff; font:3rem/52px 'Microsoft YaHei' ; color:#eb3341; border:none;display: inline-block;}
 
@@ -91,6 +94,8 @@ a,a:hover{color:#333;}
 /*list content*/
 /*list content   left*/
 .m_list_wp{background:#fff;border-top:1px solid #b2b2b2;overflow: hidden;}
+.m_list_wp article{display:none;}
+.m_list_wp article.cur{display:block;}
 .m_menu_list {
     width: 31%;
     border-right: 1px solid #b2b2b2;
@@ -130,7 +135,8 @@ a,a:hover{color:#333;}
 .s_menu_dl dt a{font-size: 3rem;vertical-align: middle;display: table-cell;}
 
 .s_menu_dl dd a{font-size: 2.6rem;display: block;padding:22px 0;}
-.s_menu_dl dd a:hover{color:#ec3341;}
+.s_menu_dl dd a:hover,
+.s_menu_dl dd a.on{color:#ec3341;}
 .s_menu_dl dd a span{font-size:2.2rem;display: block;}
 
 .s_menu_dl01 dd{padding:10px 0;}
@@ -143,6 +149,20 @@ a,a:hover{color:#333;}
 .shop_car_brief{background: #e63640;font-family:Arial,"微软雅黑"; color: #fff;padding-top:10px;height: 80px;}
 .icon_shopCar{ margin-left:21px; width:100px; height:100px; position:absolute; top:-10px; border-radius:100%;
               background:url(../img/shopCar_carIcon.png) center center no-repeat #eb3341;z-index:1000; }
+.icon_shopCar:after{
+    content: attr(data-num);
+    position: absolute;
+    top: -10px;
+    left: 65px;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    background: rgba(235, 51, 65, 0.8);
+}
 .car_count{color:#fff;border-radius: 50%;background:#eb3341;display: block;position: absolute;right: 0;top: -2px;
            width: 35px; height:35px; z-index:1001; line-height: 35px;font-size:2.6rem;text-align: center;cursor:pointer;}
 .shop_car_brief p{ margin-left:130px; font-size:2.2rem; line-height:1.5;font-family:Arial,"微软雅黑";}
@@ -170,3 +190,5 @@ a,a:hover{color:#333;}
 .m_opacity_layer{ position:fixed; left:0; top:0; right:0; bottom:0; background:#000; opacity:.4}
 
 .unhappyMessage {font-size: 28px; color: #f30; display: block; padding-top: 15px;}
+.go-back{background-color:#282828;}
+.go-back .m-container{transform:scale(.95,.95);}

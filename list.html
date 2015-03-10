@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="js/viewport.js"></script>
+        <script type="text/javascript" src="js/baiduTemplate.js">
+        </script>
+        <script type="text/javascript" src="js/error.js">
+        </script>
+        <script id='promotionListTpl' type="text/template">
+            <%for(var i=0;i<data.length;i++){%>
+            <li>
+                <a href="<%=data[i].href%>">
+                    <img src="<%=data[i].img%>" alt="<%=data[i].title%>">
+                </a>
+            </li>
+            <%}%>
+        </script>
+        <script id='takeoutListTpl' type="text/template">
+            <div class="m-cue">
+                <p>
+                    温馨提示：
+                    <br>
+                    <%-data.tip.join('<br>')%>
+                </p>
+            </div>
+            <%for(var i=0;i<data.goods.length;i++){
+                var good = data.goods[i];
+            %>
+            <dl class="m-categroy-lst">
+                <dt>
+                    <i class="icon iconfont">&#<%=good.icon%>;</i>
+                    <%=good.title%>
+                </dt>
+                <%for(var j=0;j<good.list.length;j++){
+                    var dd = good.list[j];
+                %>
+                <dd data-id=<%=dd.id%> data-title=<%=dd.title%> data-price=<%=dd.price%> data-remaining=<%=dd.remaining%>>
+                    <div class="m-itm f-cb">
+                        <div class="m-control f-fr">
+                            <a href="#" class="u-icon-reduce"></a>
+                            <span>0</span>
+                            <a href="#" class="u-icon-add"></a>
+                        </div>
+                        <h3>
+                            <a href="#"><%=dd.title%></a>
+                        </h3>
+                        <p>
+                            <span class="ft-red01">¥<%=dd.price%>元/份</span>
+                            （剩余<%=dd.remaining%>份）
+                        </p>
+                    </div>
+                </dd>
+                <%}%>
+            </dl>
+            <%}%>
+            <div class="m-order-nd f-cb mb10">
+                <input class="f-fr u-btn-order-submit" type="button" value="加入购物车" />
+                <span>
+                    要
+                </span>
+                <input type="tel" class="u-typeNum"/>
+                <span>
+                    份
+                </span>
+            </div>
+        </script>
+        <script id='goodsListTpl' type="text/template">
+            <%for(var i=0;i<data.goods.length;i++){
+                var good = data.goods[i];
+            %>
+            <li data-id="<%=good.id%>" data-imgs="<%=good.imgs%>">
+               <div class="pic_list_left"> <a href="#" class="detail"><img  width="164" height="164" src="<%=good.img%>"></a></div>
+               <div class="pic_list_right">
+                   <div class="pic_list_right_text"><%=good.title%></div>
+                   <div class="pic_list_right_text2">规格<%=good.format%></div>
+                   <div class="pic_list_right_price"><%=good.price%>元</div>
+                   <div class="pic_list_right_number">
+                       <i class="u-icon-reduce"></i> <span class="number">0</span> <i class="u-icon-add"></i>
+                   </div>
+               </div>
+            </li>
+            <%}%>
+        </script>
+        <script id='minatoListTpl' type="text/template">
+            <%for(var i=0;i<data.goods.length;i++){
+                var good = data.goods[i];
+            %>
+            <li data-id="<%=good.id%>" data-imgs="<%=good.imgs%>" data-img="<%=good.img%>" data-title="<%=good.title%>" data-format="<%=good.format%>" data-price="<%=good.price%>" data-num=0>
+               <div class="pic_list_left"> <a href="#" class="detail"><img  width="164" height="164" src="<%=good.img%>"></a></div>
+               <div class="pic_list_right">
+                   <div class="pic_list_right_text"><%=good.title%></div>
+                   <div class="pic_list_right_text2">规格<%=good.format%></div>
+                   <div class="pic_list_right_price"><%=good.price%>元</div>
+                   <div class="pic_list_right_number">
+                       <i class="u-icon-reduce"></i> <span class="number">0</span> <i class="u-icon-add"></i>
+                   </div>
+               </div>
+            </li>
+            <%}%>
+        </script>
+        <script id='goodsDetailTpl' type="text/template">
+            <div class="queding">确定</div>
+            <div class="animateTShell">
+                <div id="animateT1" class="animate">
+                    <ul>
+                        <%for(var i=0;i<imgs.length;i++){
+                            var img = imgs[i];
+                        %>
+                        <li>
+                            <a href="#"><img src="<%=img%>"></a>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+            </div>
+            <div class="shop_border">
+                <div class="pic_list_right_text"><%=title%></div>
+                <div class="pic_list_right_price">￥<%=price%></div>
+            </div>
+            <div class="shop_border">
+                <div class="shop_number">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</div>
+                <div class="pic_list_right_number pic_list_right_number2">
+                    <i class="u-icon-reduce"></i> <span class="number"><%=num%></span> <i class="u-icon-add"></i>
+                </div>
+            </div>
+            <div class="shop_border">
+                <div class="btnRed" data-id="<%=id%>">确认购买</div>
+            </div>
+        </script>
+        <script id='shopCarListTpl' type="text/template">
+            <%
+                title = title.join('+');
+                id = id.join(',');
+            %>
+            <li data-id="<%=id%>" data-unitPrice="<%=unitPrice%>">
+                <strong><%=title%></strong>
+                <em>￥<%=totalPrice%></em>
+                <span class="pro_count">
+                    <i class="icon_sub">-</i>
+                    <i class="pro_count_text"><%=num%></i>
+                    <i class="icon_add">+</i>
+                </span>
+            </li>
+        </script>
+
+        <!--nec-->
+        <link rel="stylesheet" type="text/css" href="css/functions.css">
+        <link rel="stylesheet" type="text/css" href="css/media.css">
+        <!--/nec-->
+
+        <link rel="stylesheet" type="text/css" href="css/publicmoblie.css" />
+        <link rel="stylesheet" type="text/css" href="css/list.css" />
+        <link rel="stylesheet" type="text/css" href="css/error.css" />
+    </head>
+    <body>
+        <div id="mask" class="m_opacity_layer" style="display:none"></div>
+        <div class="layout">
+            <div class="m-container">
+                <header class="m_gps_store">
+                    <a href="javascript:;" class="a_perceter"></a><span class="gps_store"><i class="icon_gps"></i>永安里店<i class="icon_drop"></i></span>
+                    <div class="m_gps_hide" style="display:none;">
+                    <i class="m_gps_close">X</i>
+                        <div class="hide_title">切换位置</div>
+                        <div class="hide_select">
+                            <select class="select_leve01" date-role="none"><option>北京市</option><option>上海市</option></select>
+                            <select class="select_leve02">
+                                <option>东城区</option>
+                                <option>西城区</option>
+                                <option>崇文区</option>
+                                <option>宣武区</option>
+                                <option>朝阳区</option>
+                                <option>石景山区</option>
+                                <option>海淀区</option>
+                                <option>门头沟区</option>
+                                <option>房山区</option>
+                                <option>通州区</option>
+                                <option>昌平区</option>
+                                <option>顺义区</option>
+                            </select>
+                        </div>
+                        <div class="hide_search clear">
+                            <input type="search" class="input_search" value="请输入您的具体地址"><input type="button" class="btn_enter_sech" value="确定">
+                        </div>
+                        <div class="hide_title"><i class="icon_gps"></i>定位到当前位置</div>
+                        <dl class="near_add_list">
+                            <dt>历史位置</dt>
+                            <dd>
+                                <em>万达广场</em>
+                                <span>地址地址地址地址</span>
+                                <span>211-2234343434</span>
+                                <i>323km</i>
+                            </dd>
+                            <dd>
+                                <em>万达广场</em>
+                                <span>地址地址地址地址</span>
+                                <span>211-2234343434</span>
+                                <i>323km</i>
+                            </dd>
+                        </dl>
+                    </div>
+                </header>
+                <section class="m_list_wp mt_15 clear">
+                    <aside class="m_menu_list out">
+                        <dl class="s_menu_dl">
+                            <dt><a data-list="promotion-list" id="promotion-btn" href="../data/3.2.json"><i class="icon iconfont">&#xe607;</i>优惠大促</a></dt>
+                        </dl>
+                        <dl class="s_menu_dl s_menu_dl01">
+                            <dt>
+                                <a href="javascript:;">
+                                    <i class="icon iconfont">
+                                        &#xe608;
+                                    </i>
+                                    外卖餐饮
+                                </a>
+                            </dt>
+                            <dd data-list="takeout-list">
+                                <a href="./getList?list=1">
+                                    早餐
+                                    <span>
+                                        (6:30-10:00)
+                                    </span>
+                                </a>
+                                <a href="./getList?list=2">
+                                    午餐
+                                    <span>
+                                        (10:00-14:00)
+                                    </span>
+                                </a>
+                                <a href="./getList?list=3">
+                                    晚餐
+                                    <span>
+                                        (15:00-21:00)
+                                    </span>
+                        </a>
+                    </dd>
+                </dl>
+                <dl class="s_menu_dl">
+                    <dt>
+                        <a href="javascript:;">
+                            <i class="icon iconfont">
+                                &#xe606;
+                            </i>
+                            商品超市
+                        </a>
+                    </dt>
+                    <dd data-list="goods-list">
+                        <a href="javascript:;">
+                            即食
+                        </a>
+                        <a href="javascript:;">
+                            零食
+                        </a>
+                        <a href="javascript:;">
+                            饮料
+                        </a>
+                        <a href="javascript:;">
+                            酒水
+                        </a>
+                        <a href="javascript:;">
+                            日用
+                        </a>
+                    </dd>
+                </dl>
+                <dl class="s_menu_dl">
+                    <dt>
+                        <a href="javascript:;">
+                            <i class="icon iconfont">
+                                &#xe609;
+                            </i>
+                            凑单专区
+                        </a>
+                    </dt>
+                    <dd data-list="minato-list">
+                        <a href="javascript:;">
+                            凑单把
+                        </a>
+                    </dd>
+                </dl>
+            </aside>
+            <article id="promotion-list" class="m_show_wp out cur">
+                <ul class="pic_list mt_15"></ul>
+            </article>
+            <article id="takeout-list" class="m-goodslst f-cb">
+                <div class="p10"></div>
+            </article>
+            <article id="goods-list" class="m_show_wp">
+                <ul class="pic_list"></ul>
+            </article>
+            <article id="minato-list" class="m_show_wp">
+                <ul class="pic_list"></ul>
+            </article>
+        </section>
+    </div>
+    <div class="shop_detail"></div>
+    <footer class="shop_car">
+        <div class="shop_car_brief">
+            <div class="car_btn_rg">
+                <input type="submit" class="btn-order" value="选好了"/>
+                <span class="text" style="display:none">满30元起送</span>
+            </div>
+            <div class="icon_shopCar" data-num="0" data-status="off"><i class="car_count">3</i></div>
+            <p>购物车是空的</p>
+            <p>购物满¥58元，免配送费</p>
+        </div>
+        <div class="shop_car_listshow" style="display:none"><!-- 购物产品列表 默认隐藏 -->
+            <div class="link_right"><a href="javascript:;" id="a_link_enter">确定</a></div>
+            <ul class="pro_count_list">
+            </ul>
+        </div>
+    </footer>
+</div>
+<a href="javascript:;" class="u-btn-top" style="display:none;"><i class="icon iconfont">&#xe60e;</i></a>
+<script type="text/javascript" src="js/list.js"></script>
+</body>
+</html>

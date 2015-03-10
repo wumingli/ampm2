@@ -16,16 +16,22 @@ $(function(){
         toTop = $(".u-btn-top"),
         goodsDetailArea = $('.shop_detail'),
         goodsDetailTpl = baidu.template('goodsDetailTpl'),
-        container = $('.m-container'),
         shopCarArea = $('.shop_car'),
         shopCarList = shopCarArea.find('.pro_count_list'),
         shopCarListTpl = baidu.template('shopCarListTpl'),
         mask = $('#mask'),
+        layout = $('.layout'),
         tpls = {
             'takeout-list':takeoutListTpl,
             'promotion-list':promotionListTpl,
-            'goodsListTpl':goodsListTpl,
-            'minatoListTpl':minatoListTpl
+            'goods-list':goodsListTpl,
+            'minato-list':minatoListTpl
+        },
+        loadMoreUrl = {
+            'takeout-list':'xxx.xxx.xxx',
+            'promotion-list':'xxx.xxx.xxx',
+            'goods-list':'xxx.xxx.xxx',
+            'minato-list':'xxx.xxx.xxx'
         };
 
     //入场动画
@@ -63,9 +69,12 @@ $(function(){
         }
         //临时部分，之后删除start
         var temp = {
-            "./getList?list=1":"../data/3.3-zao.json",
-            "./getList?list=2":"../data/3.3-wu.json",
-            "./getList?list=3":"../data/3.3-wan.json"
+            "./getList?list=1":"./data/3.3-zao.json",
+            "./getList?list=2":"./data/3.3-wu.json",
+            "./getList?list=3":"./data/3.3-wan.json",
+            "./getList?list=4":"./data/3.4.json",
+            "./getList?list=5":"./data/3.4.json",
+            "./getList?list=6":"./data/3.4.json"
         };
         href = temp[href];
         //临时部分，之后删除end
@@ -121,14 +130,18 @@ $(function(){
             }
         });
     }).trigger('click');
-	//top按钮效果
+	//top按钮效果 && 加载列表当前列表下一页脚本
     $(window).on('scroll',function(e){
         var article_showHeight = window.screen.height,
-            t = document.documentElement.scrollTop || document.body.scrollTop;   
-        if( t >= article_showHeight) {
+            t = document.documentElement.scrollTop || document.body.scrollTop,
+            maxHeight = layout.height() - 20;
+        if(t >= article_showHeight){
             toTop.show();
         }else{
             toTop.hide();
+        }
+        if(t + article_showHeight > maxHeight){
+            loadMore();
         }
     });
     //toTop按钮
@@ -225,7 +238,7 @@ $(function(){
         })
     });
     //购物车事件
-    shopCarArea.on('click', '.m_shopCar', function () {
+    shopCarArea.on('click', '.icon_shopCar', function () {
         var $this = $(this),
             num = parseInt($this.data('num'));
         if (num === 0) {
@@ -239,7 +252,7 @@ $(function(){
             $this.data('status','on');
             mask.one('click',containerDown);
         }
-    }).on('click', '.icon_sub', function(){
+    }).on('click', '#a_link_enter', containerDown).on('click', '.icon_sub', function(){
         var self = $(this);
         var li = self.closest('li');
         var index = li.index();
@@ -247,9 +260,9 @@ $(function(){
         goodData.num = goodData.num - 1;
         if(goodData.num == 0){
             shoppingCart.rm(index);
-            shopCarArea.find('.m_shopCar').data('num') = shoppingCart.goods.length;
+            shopCarArea.find('.icon_shopCar').data('num') = shoppingCart.goods.length;
             if(!shoppingCart.goods.length){
-                shopCarArea.find('.m_shopCar').trigger('click');
+                shopCarArea.find('.icon_shopCar').trigger('click');
             }
             return;
         }
@@ -265,13 +278,42 @@ $(function(){
 
     function containerUp() {
         mask.show();
-        container.addClass('go-back');
+        layout.addClass('go-back');
+		shopCarArea.find('.shop_car_listshow').slideDown(500);
+		var num=parseInt(shopCarArea.find('.icon_shopCar').data('num'),10);
+		$('.icon_shopCar').animate({top: '-'+(num*40+170)+'px'}, 500);
     }
 
     function containerDown() {
-        container.removeClass('go-back');
+        layout.removeClass('go-back');
         mask.hide();
         mask.off('click');
+
+		shopCarArea.find('.shop_car_listshow').slideUp(500);
+		$('.icon_shopCar').animate({top: '-10px'}, 500);
+    }
+
+    function loadMore(){
+        var article = section.find("article.cur"),
+            id = article.attr('id'),
+            lock = parseInt(article.data('lock'),10),
+            tpl,
+            url;
+        if(!lock){
+            article.data('lock',1);
+            tpl = tpls[id];
+            $.ajax({
+                url:loadMoreUrl[id],
+                success:function(data){
+                    article.data('lock',1);
+                    if(id == 'takeout-list'){
+                        article.find('m-order-nd').before($(tpl(data)).find('dl'));
+                    }else{
+                        article.children().first().append(tpl(data))
+                    }
+                }
+            });
+        }
     }
     
     var shoppingCart = {

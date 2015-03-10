@@ -1,0 +1,20 @@
+{
+    "status": "ok",
+    "data": {
+        "goods":[{
+            "id":9511,
+            "title": "xyz",
+            "imgs":["xxx.jpg","xxx.jpg","xxx.jpg"],
+            "img":"xxx.jpg",
+            "price": "8",
+            "format": "xl"
+        },{
+            "id":9511,
+            "title": "xyz",
+            "imgs":["xxx.jpg","xxx.jpg","xxx.jpg"],
+            "img":"xxx.jpg",
+            "price": "8",
+            "format": "xl"
+        }]
+    }
+}
