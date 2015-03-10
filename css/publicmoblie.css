@@ -64,7 +64,7 @@ a,a:hover{color:#333;}
 .m_gps_store{height:74px;border-top: 1px solid #b2b2b2;position:relative;
       text-align: center;font-family:Arial,"微软雅黑";background: #fff;font-size: 3.2rem;color:#5e5e5e; }
 .gps_store{display: block;text-align: center;cursor: pointer;line-height: 74px;border-bottom:1px solid #b2b2b2;}
-.a_perceter{position: absolute; right:5%; top: 20%;width: 46px; height: 46px; display: block; 
+.a_perceter{position: absolute; right:5%; top: 20%;width: 46px; height: 46px; display: block;
       background:url(../img/icon_per.png) no-repeat;}
 /*hide div*/
 .m_gps_close{position: absolute; font-family: "微软雅黑";font-size: 3.2rem; width: 45px;height: 45px;display: block;top: 2%;left: 2%;color:#333;}
@@ -116,6 +116,14 @@ a,a:hover{color:#333;}
 
 
 /*.m_menu_list dl{display: table;text-align: center;width: 100%;}*/
+.s_menu_dl{
+    max-height: 65px;
+    overflow: hidden;
+    -webkit-transition: all ease .7s;
+}
+.s_menu_dl.active{
+    max-height: 500px;
+}
 .s_menu_dl dt,.s_menu_dl dd{border-bottom: 1px solid #b2b2b2; display: table;vertical-align: middle;width: 100%;}
 .s_menu_dl dt{height:64px;}
 .s_menu_dl dt a,.s_menu_dl dd a{color: #5b5b5b;vertical-align:middle;}
@@ -133,7 +141,7 @@ a,a:hover{color:#333;}
 /*shop car fixed*/
 .shop_car{position: fixed;bottom: 0;left: 0;width: 100%;z-index: 999; }
 .shop_car_brief{background: #e63640;font-family:Arial,"微软雅黑"; color: #fff;padding-top:10px;height: 80px;}
-.icon_shopCar{ margin-left:21px; width:100px; height:100px; position:absolute; top:-10px; border-radius:100%; 
+.icon_shopCar{ margin-left:21px; width:100px; height:100px; position:absolute; top:-10px; border-radius:100%;
               background:url(../img/shopCar_carIcon.png) center center no-repeat #eb3341;z-index:1000; }
 .car_count{color:#fff;border-radius: 50%;background:#eb3341;display: block;position: absolute;right: 0;top: -2px;
            width: 35px; height:35px; z-index:1001; line-height: 35px;font-size:2.6rem;text-align: center;cursor:pointer;}
