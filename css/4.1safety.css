@@ -24,7 +24,7 @@ body{background:#f2f1ef; }
 
 .input_code input{width:50%;display: inline-block; }
 .input_code a{width: 34.4%;margin-left: 4%;display: inline-block;text-align: center;padding:13px 0;}
-.input_code a:hover{color: #fff;background: #b2b2b2;}
+.input_code a:hover{color: #fff;/*background: #b2b2b2;*/}
 .input_links{text-align:right;width: 80%;margin: 0 auto;padding-top: 18px;font-family:Arial,"微软雅黑";}
 .input_links a{color: #5a5a5a;text-decoration: underline;font-size: 2.4rem;}
 .input_tips{color:#5a5a5a;line-height: 2.6rem;font-size: 2.4rem;width: 80%;margin: 0 auto;padding-top: 35px;font-family:Arial,"微软雅黑"; }
@@ -52,3 +52,7 @@ body{background:#f2f1ef; }
 .input_select  select{border:none;font-size: 3rem;padding:21px 5% 21px 0;font-family:Arial,"微软雅黑";color: #a8a8a8;}
 
 .inputin_wp .btn_finish {margin-top: 75px;}
+
+.input_code a.a_has_sent {background-color: #ccc; color: #fff;}
+p.error {font-size: 28px;color: #f30; padding-top: 10px;display: none;}
+p.error.show {display: block;}

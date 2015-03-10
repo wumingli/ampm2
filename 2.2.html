@@ -11,13 +11,14 @@
 <!--/nec-->
 <link rel="stylesheet" type="text/css" href="css/publicmoblie.css" />
 <link rel="stylesheet" type="text/css" href="css/4.1safety.css" />
+<link rel="stylesheet" type="text/css" href="css/error.css" />
 </head>
 <body>
 <div class="layout">
 	<section class="safety_wp">
         <form id="login">
             <div class="pic_header"><a href="#"></a><span>王大拿</span></div>
-            <div class="input_layer"><input type="text" class="input_norstyle" id="phone" value="" maxlength="11" placeholder="请输入手机号" /></div>
+            <div class="input_layer"><input type="text" class="input_norstyle" id="phone" value="" maxlength="11" data-mobile placeholder="请输入手机号" /><p class="error">请输入正确的手机号</p></div>
             <div class="input_code"><input type="text" class="input_norstyle" id="checkCode" value="" maxlength="6" placeholder="请输入手机验证码" /><a href="javascript:;" class="a_sencode border_gray" >发送验证码</a></div>
             <div class="input_layer"><input type="password" class="input_norstyle" value="" maxlength="6" id="pwd" placeholder="请输入密码" /></div>
             <div class="input_layer"><input type="password" class="input_norstyle" value="" maxlength="6" id="repwd" placeholder="请再次输入密码" /></div>
@@ -34,10 +35,11 @@
         <p>copyright &copy; 2015-2020 全时便利</p>
     </div>
 </div>
+<script type="text/javascript" src="js/timeCount.js"></script>
 <script type="text/javascript" src="js/happy.editByZxc.js"></script>
 <script type="text/javascript">
     $(function () {
-        $('#login').isHappy({
+        $('form').isHappy({
             fields: {
                 '#phone': {
                     required: true,
@@ -53,14 +55,13 @@
                 },
                 '#pwd': {
                     required: true,
-                    message: '请输密码',
+                    message: '请输入密码',
                     showErrorMsg:true
                 },
                 '#repwd': {
                     required: true,
-                    message: '请输入确认密码或确认密码与密码不一致',
-                    showErrorMsg:true,
-                    equal: $('#repwd').val()
+                    message: '请输入确认密码',
+                    showErrorMsg:true
                 }
             }
         });
