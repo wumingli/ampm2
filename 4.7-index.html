@@ -41,22 +41,23 @@
     
      
      <div class="m-charge-form">
-     	<div class="m-itm">
-        	<h3>当前卡号:110103173942433<br>
-				当前卡余额:200元
-            </h3>
-        </div>
-        <div class="m-itm f-tac">
-        	<div class="m-input">
-            	<input type="text" value="" maxlength="20" required="required"  placeholder="请输入充值金额"/>
-            </div>
-            <p class="u-ts">温馨提示：为方便您的购物体验，建议一次性将卡余额充值到电子钱包</p>
-        </div>
-        
-        <div class="m-itm f-tac">
-        	
-            <button class="u-btn-charge mt20 s-red">确定</button>
-        </div>
+       <form>
+       	<div class="m-itm">
+          	<h3>当前卡号:110103173942433<br>
+  				当前卡余额:200元
+              </h3>
+          </div>
+          <div class="m-itm f-tac">
+          	<div class="m-input">
+              	<input type="text" value="" maxlength="20" id="czje" placeholder="请输入充值金额"/>
+              </div>
+              <p class="u-ts">温馨提示：为方便您的购物体验，建议一次性将卡余额充值到电子钱包</p>
+          </div>
+          
+          <div class="m-itm f-tac">
+              <button class="u-btn-charge mt20 s-red">确定</button>
+          </div>
+        </form>
      </div>
      
      
@@ -70,7 +71,21 @@
         <p>copyright &copy; 2015-2020 全时便利</p>
     </div>
 </div>
-</body>
 
+<script type="text/javascript" src="js/happy.editByZxc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('form').isHappy({
+            fields: {
+                '#czje': {
+                    required: true,
+                    message: '请输入充值金额',
+                    showErrorMsg:true
+                }
+            }
+        });
+    });
+</script>
+</body>
 </html>
 

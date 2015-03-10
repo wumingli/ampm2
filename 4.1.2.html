@@ -15,11 +15,13 @@
 <body>
 <div class="layout">
 	<section class="safety_wp">
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="11" required="required"  placeholder="请输入手机号" /></div>
-        <div class="input_code"><input type="text" class="input_norstyle" value="" maxlength="6" required="required" placeholder="请输入手机验证码" /><a href="javascript:;" class="a_sencode " >发送验证码</a></div>
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" required="required" placeholder="请设置新支付密码(6位数字)" /></div>
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" required="required" placeholder="请确认新支付密码" /></div>
-        <div class="btn_submit"><input type="button" class="input_btn" value="提交"></div>
+        <form>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="11" id="phone" data-mobile placeholder="请输入手机号" /><p class="error">请输入正确的手机号</p></div>
+            <div class="input_code"><input type="text" class="input_norstyle" value="" maxlength="6" id="code" placeholder="请输入手机验证码" /><a href="javascript:;" class="a_sencode " >发送验证码</a></div>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" id="pwd" placeholder="请设置新支付密码(6位数字)" /></div>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" id="repwd" placeholder="请确认新支付密码" /></div>
+            <div class="btn_submit"><input type="submit" class="input_btn" value="提交"></div>
+        </form>
     </section>
     
 </div>
@@ -29,6 +31,40 @@
             <p>copyright &copy; 2015-2020 全时便利</p>
     </div>
 </div>
+<script type="text/javascript" src="js/timeCount.js"></script>
+<script type="text/javascript" src="js/happy.editByZxc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('form').isHappy({
+            fields: {
+                '#phone': {
+                    required: true,
+                    test: 'USPhone',
+                    message: '请输入手机号',
+                    showErrorMsg:true
+                },
+                '#code': {
+                    required: true,
+                    test: 'validCode',
+                    message: '请输入手机验证码(6位数字)',
+                    showErrorMsg:true
+                },
+                '#pwd': {
+                    required: true,
+                    message: '请设置新支付密码(6位数字)',
+                    showErrorMsg:true,
+                    test: 'validCode'
+                },
+                '#repwd': {
+                    required: true,
+                    message: '请确认新支付密码',
+                    showErrorMsg:true,
+                    test: 'validCode'
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
 

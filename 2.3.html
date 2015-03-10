@@ -15,11 +15,13 @@
 <body>
 <div class="layout">
 	<section class="safety_wp">
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="20" required="required"  placeholder="请输入支付密码" /></div>
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" required="required" placeholder="请再次输入支付密码" /></div>
-        <div class="btn_submit"><input type="button" class="input_btn" value="提交"></div>
-        <div class="input_links"><a href="#">忘记密码？</a></div>
-        <div class="input_tips">温情提示：支付密码用于消费，影响您的账户资金安全，请妥善保管！</div>
+        <form>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="20" id="pwd" placeholder="请输入支付密码" /></div>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" id="repwd" placeholder="请再次输入支付密码" /></div>
+            <div class="btn_submit"><input type="submit" class="input_btn" value="提交"></div>
+            <div class="input_links"><a href="#">忘记密码？</a></div>
+            <div class="input_tips">温情提示：支付密码用于消费，影响您的账户资金安全，请妥善保管！</div>
+        </form>
     </section>
 </div>
 <div class="m-user-copyright">
@@ -28,6 +30,25 @@
     	<p>copyright &copy; 2015-2020 全时便利</p>
 	</div>
 </div>
+<script type="text/javascript" src="js/happy.editByZxc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('form').isHappy({
+            fields: {
+                '#pwd': {
+                    required: true,
+                    message: '请输入支付密码',
+                    showErrorMsg:true
+                },
+                '#repwd': {
+                    required: true,
+                    message: '请再次输入支付密码',
+                    showErrorMsg:true
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
 

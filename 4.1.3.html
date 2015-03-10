@@ -15,10 +15,12 @@
 <body>
 <div class="layout">
 	<section class="safety_wp">
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="20" required="required"  placeholder="请输入旧密码" /></div>
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" required="required" placeholder="请设置新登录密码" /></div>
-        <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" required="required"  placeholder="请再次输入新登录密码" /></div>
-        <div class="btn_submit"><input type="button" class="input_btn" value="提交"></div>
+        <form>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="20" id="oldPwd"  placeholder="请输入旧密码" /></div>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" id="pwd" placeholder="请设置新登录密码" /></div>
+            <div class="input_layer"><input type="text" class="input_norstyle" value="" maxlength="6" id="repwd"  placeholder="请再次输入新登录密码" /></div>
+            <div class="btn_submit"><input type="submit" class="input_btn" value="提交"></div>
+        </form>
     </section>
     
 </div>
@@ -28,6 +30,32 @@
         <p>copyright &copy; 2015-2020 全时便利</p>
     </div>
 </div>
+<script type="text/javascript" src="js/happy.editByZxc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('form').isHappy({
+            fields: {
+                '#oldPwd': {
+                    required: true,
+                    message: '请输入旧密码',
+                    showErrorMsg:true
+                },
+                '#pwd': {
+                    required: true,
+                    message: '请设置新登录密码',
+                    showErrorMsg:true,
+                    test: 'validCode'
+                },
+                '#repwd': {
+                    required: true,
+                    message: '请再次输入新登录密码',
+                    showErrorMsg:true,
+                    test: 'validCode'
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
 

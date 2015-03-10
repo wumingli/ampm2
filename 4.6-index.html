@@ -41,25 +41,27 @@
     
      
      <div class="m-charge-form">
+     <form>
      	<div class="m-itm">
         	<label>卡号：</label>
            
-            	<input type="text" value="" maxlength="20" required="required"  placeholder="请输入全时便利卡号" />
+            	<input type="text" value="" maxlength="20" id="qskh" placeholder="请输入全时便利卡号" />
             
         </div>
         <div class="m-itm">
         	<label>密码：</label>
            
-            	<input type="password" value="" maxlength="20" required="required"  placeholder="请刮开涂层输入密码" />
+            	<input type="password" value="" maxlength="20" id="qspwd" placeholder="请刮开涂层输入密码" />
             
         </div>
         <div class="m-itm f-tac"><img src="img/charge_img.png" width="355" height="139" class="mt20"/></div>
         
         <div class="m-itm f-tac">
-        	<button class="u-btn-charge s-red">取消</button><br>
+        	<button class="u-btn-charge s-red" onclick="history.go(-1);">取消</button><br>
 
-            <button class="u-btn-charge mt20 s-red">下一步</button>
+            <button class="u-btn-charge mt20 s-red" type="submit">下一步</button>
         </div>
+      </form>
      </div>
      
      
@@ -72,7 +74,25 @@
         <p>copyright &copy; 2015-2020 全时便利</p>
     </div>
 </div>
+<script type="text/javascript" src="js/happy.editByZxc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('form').isHappy({
+            fields: {
+                '#qskh': {
+                    required: true,
+                    message: '请输入全时便利卡号',
+                    showErrorMsg:true
+                },
+                '#qspwd': {
+                    required: true,
+                    message: '请刮开涂层输入密码',
+                    showErrorMsg:true
+                }
+            }
+        });
+    });
+</script>
 </body>
-
 </html>
 
