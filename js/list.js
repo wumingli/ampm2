@@ -67,17 +67,6 @@ $(function(){
         if (cur[0] == this) {
             return;
         }
-        //临时部分，之后删除start
-        var temp = {
-            "./getList?list=1":"./data/3.3-zao.json",
-            "./getList?list=2":"./data/3.3-wu.json",
-            "./getList?list=3":"./data/3.3-wan.json",
-            "./getList?list=4":"./data/3.4.json",
-            "./getList?list=5":"./data/3.4.json",
-            "./getList?list=6":"./data/3.4.json"
-        };
-        href = temp[href];
-        //临时部分，之后删除end
         $.ajax({
             url:href,
             dataType:"json",
@@ -172,29 +161,29 @@ $(function(){
         e.stopPropagation();
         var li = $(this).closest('li')
         var data = {
-            imgs:li.data("imgs"),
-            img:li.data("img"),
-            title:li.data("title"),
-            id:li.data("id"),
-            price:li.data("price"),
-            num:li.data("num")
+            imgs:li.attr("data-imgs").split(','),
+            img:li.attr("data-img"),
+            title:li.attr("data-title"),
+            id:li.attr("data-id"),
+            price:li.attr("data-price"),
+            num:li.attr("data-num")
         };
         containerUp();
         mask.one('click',containerDown);
         goodsDetailArea.html(goodsDetailTpl(data)).show();
-        goodsDetailArea.data("imgs",data["imgs"]);
-        goodsDetailArea.data("img",data["img"]);
-        goodsDetailArea.data("title",data["title"]);
-        goodsDetailArea.data("id",data["id"]);
-        goodsDetailArea.data("price",data["price"]);
-        goodsDetailArea.data("num",data["num"]);
+        goodsDetailArea.attr("data-imgs",data["imgs"]);
+        goodsDetailArea.attr("data-img",data["img"]);
+        goodsDetailArea.attr("data-title",data["title"]);
+        goodsDetailArea.attr("data-id",data["id"]);
+        goodsDetailArea.attr("data-price",data["price"]);
+        goodsDetailArea.attr("data-num",data["num"]);
     }).on('click', ".u-icon-add", function(e){
         e.preventDefault();
         e.stopPropagation();
         var li = $(this).closest('li');
         var num = parseInt(li.find('.number').html(),10);
         num = num >= 99 ? 99 : num + 1;
-        li.data('num',num);
+        li.attr('data-num',num);
         li.find('.number').html(num);
     }).on('click', '.u-icon-reduce', function(e){
         e.preventDefault();
@@ -202,7 +191,46 @@ $(function(){
         var li = $(this).closest('li');
         var num = parseInt(li.find('.number').html(),10);
         num = num <= 0 ? 0 : num - 1;
-        li.data('num',num);
+        li.attr('data-num',num);
+        li.find('.number').html(num);
+    });
+    //凑单列表
+    minatoArea.on('click', '.detail', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var li = $(this).closest('li')
+        var data = {
+            imgs:li.attr("data-imgs").split(','),
+            img:li.attr("data-img"),
+            title:li.attr("data-title"),
+            id:li.attr("data-id"),
+            price:li.attr("data-price"),
+            num:li.attr("data-num")
+        };
+        containerUp();
+        mask.one('click',containerDown);
+        goodsDetailArea.html(goodsDetailTpl(data)).show();
+        goodsDetailArea.attr("data-imgs",data["imgs"]);
+        goodsDetailArea.attr("data-img",data["img"]);
+        goodsDetailArea.attr("data-title",data["title"]);
+        goodsDetailArea.attr("data-id",data["id"]);
+        goodsDetailArea.attr("data-price",data["price"]);
+        goodsDetailArea.attr("data-num",data["num"]);
+    }).on('click', ".u-icon-add", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var li = $(this).closest('li');
+        var num = parseInt(li.find('.number').html(),10);
+        num = num >= 99 ? 99 : num + 1;
+        li.attr('data-num',num);
+        li.find('.number').html(num);
+    }).on('click', '.u-icon-reduce', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var li = $(this).closest('li');
+        var num = parseInt(li.find('.number').html(),10);
+        num = num <= 0 ? 0 : num - 1;
+        li.attr('data-num',num);
         li.find('.number').html(num);
     });
     //商品详情事件
@@ -214,24 +242,26 @@ $(function(){
         e.stopPropagation();
         var p = $(this).parent();
         var num = parseInt(p.find('.number').html(),10);
-        num = num <= 0 ? 0 : num - 1;
-        goodsDetailArea.data('num',num);
-        li.find('.number').html(num);
+        num = num >= 99 ? 99 : num + 1;
+        goodsDetailArea.attr('data-num',num);
+        p.find('.number').html(num);
+        section.find('article.cur li[data-id='+goodsDetailArea.attr("data-id")+']'+' .u-icon-add').trigger('click');
     }).on('click', '.u-icon-reduce', function(e){
         e.preventDefault();
         e.stopPropagation();
         var p = $(this).parent();
         var num = parseInt(p.find('.number').html(),10);
         num = num <= 0 ? 0 : num - 1;
-        goodsDetailArea.data('num',num);
-        li.find('.number').html(num);
+        goodsDetailArea.attr('data-num',num);
+        p.find('.number').html(num);
+        section.find('article.cur li[data-id='+goodsDetailArea.attr("data-id")+']'+' .u-icon-reduce').trigger('click');
     }).on('click', '.btnRed', function(e){
-        var unitPrice = parseFloat(goodsDetailArea.data('price'),10).toFixed(2),
-            num = parseInt(goodsDetailArea.data('num'),10),
+        var unitPrice = parseFloat(goodsDetailArea.attr('data-price'),10).toFixed(2),
+            num = parseInt(goodsDetailArea.attr('data-num'),10),
             totalPrice = (unitPrice*num).toFixed(2).toString();
         shoppingCart.add({
-            "id":[goodsDetailArea.data('id')],
-            "title":[goodsDetailArea.data('title')],
+            "id":[goodsDetailArea.attr('data-id')],
+            "title":[goodsDetailArea.attr('data-title')],
             "unitPrice":unitPrice,
             "totalPrice":totalPrice,
             "num":num
@@ -240,19 +270,21 @@ $(function(){
     //购物车事件
     shopCarArea.on('click', '.icon_shopCar', function () {
         var $this = $(this),
-            num = parseInt($this.data('num'));
+            num = parseInt($this.attr('data-num'));
         if (num === 0) {
             return false;
         }
-        if ($this.data('status') === 'on') {
+        if ($this.attr('data-status') === 'on') {
             containerDown();
-            $this.data('status','off');
+            shopCarDown();
+            $this.attr('data-status','off');
         } else {
             containerUp();
-            $this.data('status','on');
-            mask.one('click',containerDown);
+            shopCarUp();
+            $this.attr('data-status','on');
+            mask.one('click',function(){containerDown();shopCarDown();});
         }
-    }).on('click', '#a_link_enter', containerDown).on('click', '.icon_sub', function(){
+    }).on('click', '#a_link_enter', function(){containerDown();shopCarDown();}).on('click', '.icon_sub', function(){
         var self = $(this);
         var li = self.closest('li');
         var index = li.index();
@@ -260,7 +292,7 @@ $(function(){
         goodData.num = goodData.num - 1;
         if(goodData.num == 0){
             shoppingCart.rm(index);
-            shopCarArea.find('.icon_shopCar').data('num') = shoppingCart.goods.length;
+            shopCarArea.find('.icon_shopCar').attr('data-num', shoppingCart.goods.length);
             if(!shoppingCart.goods.length){
                 shopCarArea.find('.icon_shopCar').trigger('click');
             }
@@ -279,33 +311,38 @@ $(function(){
     function containerUp() {
         mask.show();
         layout.addClass('go-back');
-		shopCarArea.find('.shop_car_listshow').slideDown(500);
-		var num=parseInt(shopCarArea.find('.icon_shopCar').data('num'),10);
-		$('.icon_shopCar').animate({top: '-'+(num*40+170)+'px'}, 500);
     }
 
     function containerDown() {
         layout.removeClass('go-back');
         mask.hide();
         mask.off('click');
+    }
 
+    function shopCarUp() {
+		shopCarArea.find('.shop_car_listshow').slideDown(500);
+		//var num=parseInt(shopCarArea.find('.icon_shopCar').attr('data-num'),10);
+		//$('.icon_shopCar').animate({top: '-'+(num*40+170)+'px'}, 500);
+    }
+
+    function shopCarDown() {
 		shopCarArea.find('.shop_car_listshow').slideUp(500);
-		$('.icon_shopCar').animate({top: '-10px'}, 500);
+		//$('.icon_shopCar').animate({top: '-10px'}, 500);
     }
 
     function loadMore(){
         var article = section.find("article.cur"),
             id = article.attr('id'),
-            lock = parseInt(article.data('lock'),10),
+            lock = parseInt(article.attr('data-lock'),10),
             tpl,
             url;
         if(!lock){
-            article.data('lock',1);
+            article.attr('data-lock',1);
             tpl = tpls[id];
             $.ajax({
                 url:loadMoreUrl[id],
                 success:function(data){
-                    article.data('lock',1);
+                    article.attr('data-lock',1);
                     if(id == 'takeout-list'){
                         article.find('m-order-nd').before($(tpl(data)).find('dl'));
                     }else{
@@ -324,6 +361,7 @@ $(function(){
             if(index === false){
                 this.goods.push(data);
                 shopCarList.append(shopCarListTpl(data));
+                shopCarArea.find('.icon_shopCar').attr('data-num', shoppingCart.goods.length);
             }else {
                 this.goods[index].num = this.goods[index].num + data.num;
                 this.refresh(index);
@@ -335,6 +373,7 @@ $(function(){
             } else {
                 this.goods.splice(index,1);
                 shopCarList.children().eq(index).remove();
+                shopCarArea.find('.icon_shopCar').attr('data-num', shoppingCart.goods.length);
             }
         },
         plus: function(index){
@@ -449,10 +488,10 @@ $(function(){
                 index;
             if (set.length == 0) {
                 dd = node.closest('dd');
-                id = dd.data('id');
-                price = dd.data('price');
-                title = dd.data('title');
-                remaining = dd.data('remaining');
+                id = dd.attr('data-id');
+                price = dd.attr('data-price');
+                title = dd.attr('data-title');
+                remaining = dd.attr('data-remaining');
                 set.push({
                     'id': id,
                     'title': title,
@@ -463,13 +502,13 @@ $(function(){
                 return this.num = 1;
             } else {
                 dd = node.closest('dd');
-                id = dd.data('id');
+                id = dd.attr('data-id');
                 index = this.find(id);
                 if (index === false) {
                     if(this.num < 3){
-                        price = dd.data('price');
-                        title = dd.data('title');
-                        remaining = dd.data('remaining');
+                        price = dd.attr('data-price');
+                        title = dd.attr('data-title');
+                        remaining = dd.attr('data-remaining');
                         set.push({
                             'id': id,
                             'title': title,
@@ -505,7 +544,7 @@ $(function(){
                 return 0;
             } else {
                 dd = node.closest('dd');
-                id = dd.data('id');
+                id = dd.attr('data-id');
                 index = this.find(id);
                 if (index === false) {
                     return 0;

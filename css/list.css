@@ -67,7 +67,7 @@
 /*--form 3.5.css start--*/
 .shop_detail{
 	width: 100%;
-	height: 780px;
+	/*height: 780px;*/
 	border-top: 5px solid #ec3343;
 	position: fixed;
 	left: 0;
@@ -85,7 +85,7 @@
 	position: absolute;
 	right: 20px;
 	top: 10px;
-	z-index: 5;
+	z-index: 15;
 }
 .shop_border {
 	width: auto;
@@ -178,3 +178,65 @@
     z-index: 990;
     display:none;
 }
+/*--3.4.css start--*/
+.pic_list li{
+	display:table;
+	width: 96%;
+	margin:0 auto 10px;
+	padding:15px 2%;
+	overflow: hidden;
+	border-bottom: 1px solid #b2b2b2;
+}
+.pic_list_left{
+	width: 35%;
+	display:table-cell;vertical-align:middle;
+}
+.pic_list_left img{
+	width: 100%;
+	border: 1px solid #444041;
+	
+
+}
+.pic_list_right{
+	width: 62%;
+	padding-left:3%;
+	position: relative;
+	display:table-cell;
+	font-family:Arial,"Microsoft YaHei";
+}
+
+.pic_list_right_text{
+	text-align: left;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2.2rem;
+}
+.pic_list_right_text2{
+	text-align: left;
+	color: #5d5d5d;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2rem;
+}
+.pic_list_right_price{
+	text-align: left;
+	color: #e83548;
+	margin-top: 0.3rem;
+	font-family:Arial,"Microsoft YaHei";
+	font-size: 2.8rem;
+}
+.pic_list_right_number{
+
+	
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	text-align: right;
+	z-index: 5;
+
+}
+/*--3.4.css end--*/
+
+.s_menu_dl dt.list_gray {
+    background:#eee;
+}
+
