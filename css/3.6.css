@@ -18,6 +18,7 @@
 .pic_list_left{
 	width: 35%;
 	display:table-cell;vertical-align:middle;
+    line-height:164px;
 }
 .pic_list_right{
 	width: 62%;
@@ -68,6 +69,9 @@
 	color: #5d5d5d;
 	font-family:Arial,"Microsoft YaHei";
 	font-size: 3rem;
+    width:35px;
+    display:inline-block;
+    text-align:center;
 }
 
  .u-icon-add,.u-icon-reduce{ display:inline-block; width:37px; height:37px; background-image:url(../img/control_icon.gif); background-repeat:no-repeat; vertical-align:middle}
@@ -75,5 +79,8 @@
  .u-icon-add{ background-position:right center}
  .u-icon-reduce{ background-position:left center}
 
-
-
+/*--new--*/
+.icon_shopCar:after{display:none}
+.m_show_wp.shop_car_list{display:block}
+.pic_list_left .remove_goods{ display: inline-block; vertical-align: middle; width: 20px; height: 20px; border: 2px solid #ccc; border-radius: 20px; background: #f9f9f9; line-height:20px; }
+.pic_list_left .remove_goods.ready{ background:#e63640; color:#fff; font-weight:bold;}
